@@ -37,14 +37,30 @@
 
 <body class="font-manrope bg-[#FFF]">
     <!-- HEADER START -->
-    <header>
+    <header class="p-2">
         <!-- NAV START -->
         <div class="navbar">
             <div class="navbar-start">
-                <a class="btn btn-ghost text-[#131318] text-4xl">Hockey<span class="text-[#FF4240]">'</span>s</a>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="lg:hidden btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#131318] h-5 w-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <a class="btn btn-ghost text-[#131318] text-4xl">Hockey<span class="text-[#FF4240]">'</span>s</a>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#131318] rounded-box w-52">
+                        <li><a>Homepage</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li><a>About</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- breadcrumbs -->
-            <div class="breadcrumbs text-xl justify-center w-full">
+            <!-- CENTERED ON LARGER SCREENS -->
+            <div
+                class="breadcrumbs hidden lg:flex items-center justify-center flex-col-1 overflow-hidden text-xl w-full">
                 <ul class="text-[#424247]">
                     <li>Home</li>
                     <li>About</li>
@@ -53,51 +69,120 @@
                     <li>Contact</li>
                 </ul>
             </div>
-            <div class="navbar-end">
-                <i class="fa-solid fa-magnifying-glass text-[#89898B] text-xl items-center pr-3"></i>
-                <a class="btn text-xl bg-[#FF4240] text-[#FFF]">Get Ticket</a>
+            <div class="navbar-end flex items-center">
+                <i class="fa-solid fa-magnifying-glass text-[#89898B] text-xl pr-3"></i>
+                <a class="btn text-xl bg-[#FF4240] border-0 text-[#FFF]">Get Ticket</a>
             </div>
         </div>
         <!-- NAV END -->
     </header>
     <!-- HEADER END -->
     <!-- MAIN START -->
-    <main class="container my-10 mx-auto">
-        <div class="carousel w-full">
-            <!-- SLIDER CONTAINER -->
-
+    <main class="container mx-auto">
+        <section class="my-12">
             <div class="carousel w-full">
-                <div id="slide1" class="carousel-item relative w-full">
-                  <img src="Images/1.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-8 gap-3 bottom-5">
-                    <a href="#slide4" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide2" class="carousel-item relative w-full">
-                  <img src="Images/2.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-8 gap-3 bottom-5">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide3" class="carousel-item relative w-full">
-                  <img src="Images/3.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-8 gap-3 bottom-5">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide4" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide4" class="carousel-item relative w-full">
-                  <img src="Images/4.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-8 gap-3 bottom-5">
-                    <a href="#slide3" class="btn btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
-                  </div>
-                </div>
-              </div>
+                <!-- SLIDER CONTAINER -->
+                <div class="carousel w-full">
 
-        </div>
+                    <!-- SLIDER 1 -->
+                    <div id="slide1" class="carousel-item relative w-full">
+                        <img src="Images/1.png" class="w-full" />
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-8 gap-3 bottom-5">
+                            <a href="#slide4" class="btn btn-circle">❮</a>
+                            <a href="#slide2" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+
+                    <!-- SLIDER 2 -->
+                    <div id="slide2" class="carousel-item relative w-full">
+                        <img src="Images/2.png" class="w-full" />
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-8 gap-3 bottom-5">
+                            <a href="#slide1" class="btn btn-circle">❮</a>
+                            <a href="#slide3" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+
+                    <!-- SLIDER 3 -->
+                    <div id="slide3" class="carousel-item relative w-full">
+                        <img src="Images/3.png" class="w-full" />
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-8 gap-3 bottom-5">
+                            <a href="#slide2" class="btn btn-circle">❮</a>
+                            <a href="#slide4" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+
+                    <!-- SLIDER 4 -->
+                    <div id="slide4" class="carousel-item relative w-full">
+                        <img src="Images/4.png" class="w-full" />
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-8 gap-3 bottom-5">
+                            <a href="#slide3" class="btn btn-circle">❮</a>
+                            <a href="#slide1" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- MEET HEROES -->
+        <section class="flex my-12">
+            <div class="ml-auto">
+                <!-- RATING BADGE -->
+                <div class="-mt-96 mr-96 drop-shadow-lg rounded-2xl bg-white w-96">
+                    <div class="rounded-2xl p-5 bg-[#131318]">
+                        <h3 class="text-lg my-5 font-extrabold text-[#FFF]">Meet all the heroes from the field</h3>
+                        <p class="text-[#777]">A sport that transcends boundaries and has an <br> unparalleled ability
+                            to bring people together on the field. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PROFESSIONAL CLUB -->
+        <section class="my-12">
+            <h2 class="text-3xl my-6 font-extrabold text-center text-[#131318]">Professional Hockeys Club</h2>
+            <div class="text-[#13131863] text-center">
+                <p>Dedicated athletes, strategic teamwork, and thrilling victories <br> define our prestigious
+                    professional hockey club. Join the excellence!</p>
+            </div>
+        </section>
+        <!-- PROGRAM SECTION -->
+        <section class="my-12">
+            <h2 class="text-3xl my-6 font-extrabold text-center text-[#131318]">Program Section</h2>
+            <div class="text-[#13131863] text-center">
+                <p>discover curated initiatives fostering player development, community engagement, <br> and hockey
+                    excellence for all enthusiasts.</p>
+            </div>
+
+
+            <div class="flex justify-between gap-6">
+                <div class="grid">
+                    <img class="" src="Images/2.png" alt="">
+                    <h2 class="-mt-52 ml-5 text-3xl font-extrabold text-white">
+                        Junior Program
+                    </h2>
+                    <p class="-mt-36 ml-5 text-sm text-[#FFF]">Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                        Elit elit enim sagittis <br> turpis in magna. Id et sed euismod natoque amet nunc morbi nulla.
+                        Tortor <br> congue sed et in.</p>
+                    <a class="btn -mt-16 ml-5 w-1/2 text-xl bg-[#FF4240] border-0 text-[#FFF]">Register Now</a>
+                </div>
+                <div class="grid">
+                    <img class="" src="Images/3.png" alt="">
+                    <h2 class="-mt-52 ml-5 text-3xl font-extrabold text-white">
+                        Teenager Program
+                    </h2>
+                    <p class="-mt-36 ml-5 text-sm text-[#FFF]">Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                        Elit elit enim sagittis <br> turpis in magna. Id et sed euismod natoque amet nunc morbi nulla.
+                        Tortor <br> congue sed et in.</p>
+                    <a class="btn -mt-16 ml-5 w-1/2 text-xl bg-[#FF4240] border-0 text-[#FFF]">Register Now</a>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <img class="block ml-36 mx-auto my-8" src="Images/4.png" alt="">
+            </div>
+            <h2 class="-mt-72 ml-48 text-3xl text-[#FFF]">Professional Program</h2>
+            <p class="my-4 ml-48 text-sm text-[#FFF]">Renowned for skillful maneuvers, our professional hockey player
+                <br> exemplifies resilience, leadership, and unparalleled sportsmanship on the ice.</p>
+            <a class="btn -mt-16 ml-48 mt-1 text-xl bg-[#FF4240] border-0 text-[#FFF]">Register Now</a>
+        </section>
     </main>
     <!-- MAIN END -->
     <!-- FOOTER START -->
